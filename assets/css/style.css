@@ -20,23 +20,28 @@ body {
 
 /* Header */
 header {
-    background-color:#ffffff;
+    background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
     z-index: 99;
     width: 100%;
     box-shadow: 0px 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
-header a{
+
+header a {
     text-decoration: none;
     color: inherit;
 }
 
 /* Main */
 main {
-    background-color:goldenrod;
+    background-color: goldenrod;
     /* make     main element to take up anu surplus space  to push the footer down */
     flex: 1 0 auto;
+    margin-top: 39px;
 }
 
 /* Footer */
@@ -48,16 +53,44 @@ h1 {
     font-family: "tinos", serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color:#252525;
+    color: #252525;
 }
-#menu{
+
+#menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
-#menu > li{
-    margin-bottom:1rem;
+
+#menu>li {
+    margin-bottom: 1rem;
 }
-.active{
-    border-bottom:1px solid #3a3a3a;
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* navbar style with dropdown toggle  */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 99;
+    padding: 0 1rem;
+    left: 0;
+    box-shadow: 0px 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+/* nav toggle */
+.nav-toggle:checked~nav {
+    display: block;
+} 
+.nav-toggle-label{
+    font-size: 2rem;
 }
