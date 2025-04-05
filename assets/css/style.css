@@ -4,6 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* general styles */
+body{
+
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+color: #3a3a3a;
+}
 /* Header */
 header{
     background-color: red;
@@ -11,6 +19,8 @@ header{
 /* Main */
 main{
     background-color: blue;
+    /* make     main element to take up anu surplus space  to push the footer down */
+    flex: 1 0 auto;
 }
 /* Footer */
 footer{
