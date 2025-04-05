@@ -1,0 +1,18 @@
+/* Astercik wildcard selector to override default styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header */
+header{
+    background-color: red;
+}
+/* Main */
+main{
+    background-color: blue;
+}
+/* Footer */
+footer{
+    background-color: green;
+}
