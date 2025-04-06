@@ -90,7 +90,47 @@ nav {
 /* nav toggle */
 .nav-toggle:checked~nav {
     display: block;
-} 
-.nav-toggle-label{
+}
+
+.nav-toggle-label {
     font-size: 2rem;
+}
+
+/* media query */
+@media screen and (min-width: 768px) {
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    main {
+        margin-top: 75px;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+}
+
+@media screen and (min-width:992px) {
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
+    }
 }
