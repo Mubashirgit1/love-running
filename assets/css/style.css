@@ -75,7 +75,7 @@ main {
 #reason>h2 {
     font-size: 280%;
     text-align: center;
-    font-size: 280%;
+    margin-bottom: 20px;
 }
 
 
@@ -89,7 +89,7 @@ main {
     padding: 0 20px;
 }
 
-hr {
+#benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
@@ -102,10 +102,31 @@ hr {
     max-width: 300px;
     max-height: 300px;
 }
-#benefit-image {
+#benefits-image {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/* meetup */ 
+#times{
+    background: url(../images/dublin-city.webp) no-repeat center/cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+#times>div {
+    background-color: rgba(0, 0, 0, .6);
+    color: #fafafa;
+    padding: 15px;
+    text-align: center;
+    /* this will not wrap on screens less then 400px each
+    div will expand  to fill the available space on its row  */
+    flex-basis: 200px;
+    flex-grow: 1;
+    border: 2px solid #ffffff;
+}
+
+#times>div>h3{
+    color: #fafafa;
 }
 /* Footer */
 #social-media {
@@ -130,7 +151,9 @@ h3 {
     letter-spacing: 2px;
     color: #252525;
 }
-
+.hidden-heading{
+    display: none;
+}
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
@@ -208,10 +231,47 @@ nav {
         width: 300px;
         right: 50px;
     }
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width:75%;
+    }
+    #benefits-mental >div {
+        text-align: end;
+        align-self: flex-end;
+    }
+
 }
 
 @media screen and (min-width:992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+}
+@media screen and (min-width:1200px) {
+ #benefits{
+    display: flex;
+    flex-direction:row;
+ }
+ #benefits > div{
+    flex:1;
+ }   
+ #benefits-image{
+    order:0
+ }
+ #benefits-mental{
+    order:1
+ }
+ #benefits-mental > div {
+    align-self: flex-end;
+ }
+ #benfits-physical >div {
+    align-self: flex-start;
+ }
+
 }
