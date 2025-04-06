@@ -45,8 +45,17 @@ main {
 }
 
 /* Footer */
-footer {
-    background-color: green;
+#social-media{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px 0px;
+    list-style-type: none;  
+}
+#social-media i{
+    color: #3a3a3a;
+    font-size: 160%;
+    padding: 5%;
 }
 
 h1 {
